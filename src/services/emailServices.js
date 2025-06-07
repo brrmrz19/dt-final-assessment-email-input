@@ -23,3 +23,15 @@ const sampleEmail = [
   "miguel.rivera@gmail.com",
   "patricia.soriano@gmail.com",
 ];
+
+export const getEmailSuggestions = (query) => {
+  return new Promise((resolve) => {
+    // apii huhu
+    setTimeout(() => {
+      const filteredEmails = sampleEmail.filter((email) =>
+        email.toLowerCase().includes(query.toLowerCase())
+      );
+      resolve(filteredEmails);
+    }, 300);
+  });
+};
